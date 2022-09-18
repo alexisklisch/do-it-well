@@ -1,0 +1,40 @@
+:root{
+    font-size: 62.5%;
+    --blue: #020419;
+    --blue-1: #4E505E;
+    --blue-2: #81828C;
+    --blue-3: #B4B4BA;
+    --green: #047C75;
+    --green-1: #50A49F;
+    --green-2: #82BEBB;
+    --green-3: #B4D8D6;
+    --white: #eeeeee;
+    --grey: #E5E5F5;
+    --gold: #D39126;
+    --gold-2: #E1B268;
+    --gold-3: #F2DEBE;
+    --yellow-1: #FBC971;
+    --yellow-2: #FCD899;
+    --yellow-3: #FDE8C2;
+    --shadow: 0px 2px 6px;
+}
+
+body, p, h1, h2, h3, h4, h5, h6{
+    margin: 0; padding: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+body{
+    background-color: var(--white);
+}
+
+.container-1{
+    margin: 0 auto;
+    max-width: 960px;
+    width: calc(100% - 42px);
+}
+.container-2{
+    margin: 0 auto;
+    max-width: 960px;
+    width: calc(100% - 66px);
+}

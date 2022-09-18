@@ -1,0 +1,28 @@
+.searchInput{
+    border: 1px solid transparent;
+    background-color: var(--gold);
+    border-radius: 6px;
+    box-shadow: var(--shadow) var(--gold-3);
+    color: var(--blue);
+    font-size: 1.6rem;
+    height: 36px;
+    margin-bottom: 4px;
+    margin-left: 18px;
+    padding-left: 6px;
+    transition: 0.3s ease-in-out;
+    width: 30px;
+}
+.searchInput::placeholder{
+    visibility: hidden;
+}
+.searchInput:focus-within{
+    border: 1px solid var(--grey);
+    background-color: white;
+    max-width: 400px;
+    outline: none;
+    width: 100%;
+}
+.searchInput:focus-within::placeholder{
+    padding-bottom: 0;
+    visibility: visible;
+}

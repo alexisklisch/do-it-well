@@ -1,0 +1,10 @@
+.todosCompletedText{
+    color: var(--blue-1);
+    font-size: 1.4rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.todosCompletedText span{
+    font-weight: bold;
+}

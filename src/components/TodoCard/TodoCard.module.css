@@ -1,0 +1,21 @@
+.todoCard{
+    border: 1px solid var(--grey);
+    border-radius: 6px;
+    box-shadow: var(--shadow) var(--grey);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 6px;
+}
+.todoCard.complete{
+    border: 1px solid var(--green);
+}
+
+.todoText{
+    font-size: 1.4rem;
+    margin-right: auto;
+    padding: 0 6px;
+}
+
+.button{
+    border: none;
+}

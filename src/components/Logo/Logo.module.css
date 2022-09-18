@@ -1,0 +1,19 @@
+.title{
+    color: var(--gold);
+    font-size: 2.4rem;
+    padding-top: 30px;
+    white-space: nowrap;
+}
+
+.subTitle{
+    color: var(--blue-1);
+    display: flex;
+    font-size: 1.2rem;
+    margin-top: -4px;
+}
+
+.subTitleName{
+    color: var(--blue);
+    font-size: 1.2rem;
+    margin-left: 4px;
+}
