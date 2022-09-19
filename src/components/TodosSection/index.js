@@ -10,7 +10,9 @@ export function TodosSection(){
 
     if(searchValue.length > 0){
         searchedTodos = todoList.filter(todo => {
-            return todo.todo.includes(searchValue)
+            return todo.todo
+                .toLowerCase()
+                .includes(searchValue.toLowerCase())
         })
     } else{
         searchedTodos = todoList
@@ -18,7 +20,7 @@ export function TodosSection(){
 
     return (
         <section>
-            <TodosCompletedText todos={todoList}/>
+            <TodosCompletedText todos={searchedTodos}/>
             <TodosContainer todos={searchedTodos}/>
         </section>
     )

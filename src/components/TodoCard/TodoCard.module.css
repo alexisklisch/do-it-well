@@ -5,9 +5,15 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 6px;
+    transition: 0.3s ease-in-out;
 }
+
 .todoCard.complete{
-    border: 1px solid var(--green);
+    border: 1px solid var(--green-3);
+    box-shadow: var(--shadow) var(--green-2);
+}
+.todoCard.complete .todoText{
+    text-decoration:line-through;
 }
 
 .todoText{
@@ -17,5 +23,13 @@
 }
 
 .button{
+    align-items: center;
     border: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 6px;
+}
+
+.button svg{
+    width: 20px;
 }
