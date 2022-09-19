@@ -1,27 +1,15 @@
-import { useContext } from "react"
-import TodosContext from "../../context/TodosContext"
+import { useLocalStorage } from "../../hooks/useLocalStorage"
 import { TodosCompletedText } from "../TodosCompletedText"
 import { TodosContainer } from "../TodosContainer"
+import { fakeTodos } from "../../handler/fakeTodos"
 
 export function TodosSection(){
-    const { searchValue, todoList } = useContext(TodosContext)
-
-    let searchedTodos = []
-
-    if(searchValue.length > 0){
-        searchedTodos = todoList.filter(todo => {
-            return todo.todo
-                .toLowerCase()
-                .includes(searchValue.toLowerCase())
-        })
-    } else{
-        searchedTodos = todoList
-    }
-
+    const [ todos, setTodos ] = useLocalStorage('TODOS_V1', fakeTodos)
+    
     return (
         <section>
-            <TodosCompletedText todos={searchedTodos}/>
-            <TodosContainer todos={searchedTodos}/>
+            <TodosCompletedText todos={todos}/>
+            <TodosContainer todos={todos} setTodos={setTodos}/>
         </section>
     )
 }
