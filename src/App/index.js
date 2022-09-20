@@ -8,9 +8,9 @@ export function App(){
 
     return(
         <>
-        <Header/>
-        <Hero/>
         <TodosContext>
+            <Header/>
+            <Hero/>
             <TodosSection/>
         </TodosContext>
         <Footer/>

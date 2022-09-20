@@ -4,12 +4,22 @@ import {TodosContainer} from "../TodosContainer"
 import { TodosCompletedText } from "../TodosCompletedText"
 
 export function TodosSection(){
-    const {todos} = useContext(TodosContext)
+    const {todos, searchValue} = useContext(TodosContext)
+    let searchedTodos = []
+
+    if(searchValue.length > 0){
+        searchedTodos = todos.filter(todo => {
+            return todo.text.toLowerCase()
+                .includes(searchValue.toLowerCase())
+        })
+    }else{
+        searchedTodos = todos
+    }
     
     return (
         <section>
-            <TodosCompletedText todos={todos}/>
-            <TodosContainer todos={todos}/>
+            <TodosCompletedText todos={searchedTodos}/>
+            <TodosContainer todos={searchedTodos}/>
         </section>
     )
 }
