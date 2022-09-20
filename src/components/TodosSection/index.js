@@ -1,15 +1,15 @@
-import { useLocalStorage } from "../../hooks/useLocalStorage"
+import { useContext } from "react"
+import TodosContext from "../../context/TodosContext"
+import {TodosContainer} from "../TodosContainer"
 import { TodosCompletedText } from "../TodosCompletedText"
-import { TodosContainer } from "../TodosContainer"
-import { fakeTodos } from "../../handler/fakeTodos"
 
 export function TodosSection(){
-    const [ todos, setTodos ] = useLocalStorage('TODOS_V1', fakeTodos)
+    const {todos} = useContext(TodosContext)
     
     return (
         <section>
             <TodosCompletedText todos={todos}/>
-            <TodosContainer todos={todos} setTodos={setTodos}/>
+            <TodosContainer todos={todos}/>
         </section>
     )
 }
