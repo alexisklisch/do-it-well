@@ -8,13 +8,16 @@ export function TodosContext({children}){
     // Todos saved in localStorage
     const [todos, setTodos ] = useLocalStorage('TODOS_V1', fakeTodos)
     // Search Value
-    const [searchValue, setSearchValue] = useState('');
+    const [searchValue, setSearchValue] = useState('')
+    // Is modal open
+    const [ openModal , setOpenModal ] = useState(false)
 
 
     return(
         <Context.Provider value={{
             todos, setTodos,
-            searchValue, setSearchValue
+            searchValue, setSearchValue,
+            openModal , setOpenModal
         }}>
             {children}
         </Context.Provider>

@@ -9,6 +9,10 @@ export function SearchInput(){
     }
 
     return (
-        <input onInput={updateSearchValue} className={style.searchInput} placeholder='Clean the...'/>
+        <div className={style.searchInputContainer}>
+            <input onInput={updateSearchValue} className={style.searchInput} placeholder='Clean the...'/>
+            {/* <img src='https://api.iconify.design/mdi:close.svg?color=%23424242'/> */}
+            <img className={style.searchInputImage} src='https://api.iconify.design/mdi:clipboard-text-search-outline.svg?color=%23eeeeee'/>
+        </div>
     )
 }
