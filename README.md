@@ -28,3 +28,12 @@ yarn run dev
 ```bash
 yarn run build
 ```
+
+## Libraries used
+- React.js
+- Wouter
+
+
+## Tools
+- ViteJS
+- Webpack
