@@ -1,3 +1,7 @@
+---
+title=Do it Well
+---
+
 # Do it Well ✅
 
 Another Todo List. **But** this have a motivational phrase.
