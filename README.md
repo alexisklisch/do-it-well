@@ -1,6 +1,3 @@
----
-title:Do it Well
----
 
 # Do it Well ✅
 
