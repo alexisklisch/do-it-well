@@ -1,5 +1,5 @@
 ---
-title=Do it Well
+title:Do it Well
 ---
 
 # Do it Well ✅
